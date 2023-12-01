@@ -7,33 +7,35 @@ const teamMember = [
         "photo": "img/angela-caroll-chief-editor.jpg",
     },
     {
-        "name": "Beppe O' Napoletano",
+        "name": "img/",
         "role": "The Man of Honor",
-        "photo": "foto di Beppe",
+        "photo": "img/angela-lopez-social-media-manager.jpg",
     },
     {
         "name": "Alessio Brugi",
         "role": "The Poet",
-        "photo": "foto di Ale",
+        "photo": "img/barbara-ramos-graphic-designer.jpg",
     },
     {
         "name": "Giorgione Belardelli",
         "role": "The Mastermind",
-        "photo": "foto di Giorgione",
+        "photo": "img/scott-estrada-developer.jpg",
     },
     {
         "name": "Marcalessandro Fontana",
         "role": "The 104 meme guy",
-        "photo": "foto dell'unico",
+        "photo": "img/walter-gordon-office-manager.jpg",
     },
     {
         "name": "Gabbo Abu Dsquared",
         "role": "The man that sees the variables",
-        "photo": "foto di Gabbo",
+        "photo": "img/wayne-barnett-founder-ceo.jpg",
     }
 ];
 
 console.log(teamMember);
+
+let member = document.querySelector(".member");
 
 for (let i = 0; i < teamMember.length; i++) {
 
@@ -43,6 +45,24 @@ for (let i = 0; i < teamMember.length; i++) {
     let memberPhoto = memberIesimo.photo;
 
     console.log(memberName, memberRole, memberPhoto);
-    document.getElementsByClassName("foto").src = memberIesimo.photo;
+
+    let card = document.createElement("div");
+
+    let profilePic = document.createElement("img");
+    profilePic.src = memberIesimo.photo;
+
+    let nameElement = document.createElement("h3");
+    nameElement.append(memberIesimo.name);
+
+    let roleElement = document.createElement("h4");
+    roleElement.append(memberIesimo.role);
+
+
+    card.append(profilePic);
+    card.append(nameElement);
+    card.append(roleElement);
+    member.append(card);
+
+
 }
 

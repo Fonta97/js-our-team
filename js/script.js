@@ -58,9 +58,7 @@ for (let i = 0; i < teamMember.length; i++) {
     roleElement.append(memberIesimo.role);
 
 
-    card.append(profilePic);
-    card.append(nameElement);
-    card.append(roleElement);
+    card.append(profilePic, nameElement, roleElement);
     member.append(card);
 
 

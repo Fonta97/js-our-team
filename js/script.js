@@ -4,7 +4,7 @@ const teamMember = [
     {
         "name": "Sergio Giangianni Buzone",
         "role": "The Aquilano",
-        "photo": "img\angela-caroll-chief-editor.jpg",
+        "photo": "img/angela-caroll-chief-editor.jpg",
     },
     {
         "name": "Beppe O' Napoletano",
@@ -36,11 +36,12 @@ const teamMember = [
 console.log(teamMember);
 
 for (let i = 0; i < teamMember.length; i++) {
-    let memberIesimo = teamMember[i];
 
+    let memberIesimo = teamMember[i];
     let memberName = memberIesimo.name;
     let memberRole = memberIesimo.role;
     let memberPhoto = memberIesimo.photo;
+
     console.log(memberName, memberRole, memberPhoto);
     document.getElementsByClassName("foto").src = memberIesimo.photo;
 }
